@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Historiens hus features feature.
+ */
+
+include_once 'historiens_hus_features.features.inc';
