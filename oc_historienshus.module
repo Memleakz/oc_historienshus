@@ -1,0 +1,61 @@
+<?php
+/*
+ * Alter the default pdf print text for lokale_booking content type.
+ */
+function oc_historienshus_node_view_alter(&$build)
+{
+    if($build['#bundle'] == "lokale_booking")
+    {
+        hide($build['links']['print_html']);
+        if(isset($build['links']['print_pdf']['#links']['print_pdf']['title']))
+        {
+            $build['links']['print_pdf']['#links']['print_pdf']['title'] = 'Print Kvittering';
+        }
+        /*
+         * Is it first time we open the node ? then show receipt on view.
+         */
+        if($build['#node']->field_first_open['und'][0]['value'] == 0)
+        {
+            $wrapper = entity_metadata_wrapper('node', $build['#node']);
+            $wrapper->field_first_open->set(1);
+            $wrapper->save();
+            drupal_add_js('jQuery(document).ready(function () {window.open("/printpdf/'.$build['#node']->nid.'") });', 'inline');
+        }
+    }
+}
+/*
+ * Add styling to node forms.
+ */
+function oc_historienshus_form_lokale_booking_node_form_alter(&$form, &$form_state, $form_id)
+{
+       drupal_add_css(drupal_get_path('module', 'oc_historienshus') . '/css/node_form_lokale_booking_alter.css');
+}
+/*
+ * Add styling to custom views.
+ */
+function oc_historienshus_views_pre_render(&$view)
+{
+    if($view->name == "lokale_bookinger")
+    {
+        drupal_add_css(drupal_get_path('module', 'oc_historienshus') . '/css/lokale_booking_view.css');
+    }
+}
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function oc_historienshus_theme_registry_alter(&$theme_registry) {
+    // Defined path to the current module.
+    $module_path = drupal_get_path('module', 'oc_historienshus');
+    // Find all .tpl.php files in this module's folder recursively.
+    $template_file_objects = drupal_find_theme_templates($theme_registry, '.tpl.php', $module_path);
+    // Iterate through all found template file objects.
+    foreach ($template_file_objects as $key => $template_file_object) {
+        // If the template has not already been overridden by a theme.
+        if (!isset($theme_registry[$key]['theme path']) || !preg_match('#/themes/#', $theme_registry[$key]['theme path'])) {
+            // Alter the theme path and template elements.
+            $theme_registry[$key]['theme path'] = $module_path;
+            $theme_registry[$key] = array_merge($theme_registry[$key], $template_file_object);
+            $theme_registry[$key]['type'] = 'module';
+        }
+    }
+}
