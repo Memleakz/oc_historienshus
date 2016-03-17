@@ -2,5 +2,5 @@ name = OC Historiens hus
 description = OC Historiens hus
 core = 7.x
 package = OC
-dependancies[] = print 
-dependancies[] = historiens_hus_features
+dependencies[] = print 
+dependencies[] = historiens_hus_features
