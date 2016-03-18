@@ -10,9 +10,6 @@ and open the template in the editor.
 .main-container{
     width: 100% !important;
 }
-.odd{
-    background-color: graytext;
-}
 .view-lokale-bookinger
 {
     background-color: white;
@@ -22,4 +19,16 @@ and open the template in the editor.
     width: 15% !important;
     float:left;
     padding-right: 5px !important;
+}
+.views-widget-filter-field_start_dato_value
+{
+    width: 5% !important;
+}
+.div.views-exposed-widget.views-submit-button button
+{
+    width: auto;
+    float:left !important;
+}
+.div.views-exposed-widget.views-submit-button{
+    width: 100%;
 }
