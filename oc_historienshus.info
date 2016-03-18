@@ -4,3 +4,5 @@ core = 7.x
 package = OC
 dependencies[] = print 
 dependencies[] = historiens_hus_features
+dependencies[] = print_pdf_wkhtmltopdf
+dependencies[] = print_ui
