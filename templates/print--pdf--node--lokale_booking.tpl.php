@@ -7,14 +7,14 @@ $wrapper = entity_metadata_wrapper('node', $node);
 /*
  * Setup start_time objects
  */
-$start_date = date('d/m/Y',$wrapper->field_start_dato->value());
-$start_time = date("H:i",  $wrapper->field_start_tidspunkt->value());
+$date_data = $wrapper->field_start_dato->value();
+$start_date = date('d/m/Y',  strtotime($date_data['value']));
+$start_time = date("H:i", strtotime($date_data['value']));
 /*
  * Setup stop_time objects
  */
-$slut_dato = $wrapper->field_slut_dato->value();
-$slut_dato = date('d/m/Y H:m',$slut_dato);
-$slut_time = date("H:i", $wrapper->field_slut_tidspunkt->value());
+$slut_dato = date('d/m/Y',strtotime($date_data['value2']));
+$slut_time = date("H:i", strtotime($date_data['value2']));
 
 $Addresse_data = $wrapper->field_adresse->value();
 
