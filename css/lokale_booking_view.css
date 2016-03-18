@@ -21,4 +21,5 @@ and open the template in the editor.
 {
     width: 15% !important;
     float:left;
+    padding-right: 5px !important;
 }
