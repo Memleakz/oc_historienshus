@@ -25,7 +25,8 @@ and open the template in the editor.
     width: 8% !important;
 }
 .div.views-exposed-widget.views-submit-button{
-    width: 100% !important;
+    
+    float:left !important;
 }
 .views-row{
     float:left;
