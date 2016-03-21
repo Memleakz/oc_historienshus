@@ -27,7 +27,7 @@ and open the template in the editor.
 .views-submit-button{
     float:left !important;
 }
-.views-exposed-form .views-exposed-widget .btn{
+.views-submit-button .btn{
     margin-top: 20px !important;
 }
 .views-reset-button .btn{
