@@ -58,3 +58,7 @@ and open the template in the editor.
      width: auto !important;
     height:auto !important;
 }
+.views-row-odd
+{
+    background-color: lightgrey;
+}
