@@ -38,6 +38,20 @@ function oc_historienshus_views_pre_render(&$view)
     if($view->name == "lokale_bookinger")
     {
         drupal_add_css(drupal_get_path('module', 'oc_historienshus') . '/css/lokale_booking_view.css');
+        /*
+         * Alter the date stuff to make sense for the user.
+         */
+        foreach($view->result as $item)
+        {
+            $start_date = date("d/m/Y",strtotime($item->field_field_start_dato[0]['raw']['value']));
+            $start_time = date("H:i",strtotime($item->field_field_start_dato[0]['raw']['value']));
+            
+            $end_date = date("d/m/Y",strtotime($item->field_field_start_dato[0]['raw']['value2']));
+            $end_time = date("H:i",strtotime($item->field_field_start_dato[0]['raw']['value2']));
+
+            $Final_string = "Start: {$start_date}<br/>Slut: {$end_date}<br/>{$start_time}-{$end_time}";
+            $item->field_field_start_dato[0]['rendered']['#markup'] = $Final_string;
+        }
     }
 }
 /**

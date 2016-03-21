@@ -63,7 +63,7 @@ function historiens_hus_features_field_default_field_instances() {
         ),
       ),
       'type' => 'addressfield_standard',
-      'weight' => 9,
+      'weight' => 5,
     ),
   );
 
@@ -113,7 +113,7 @@ function historiens_hus_features_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 18,
+      'weight' => 14,
     ),
   );
 
@@ -156,7 +156,7 @@ function historiens_hus_features_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 22,
+      'weight' => 16,
     ),
   );
 
@@ -196,7 +196,7 @@ function historiens_hus_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 8,
+      'weight' => 7,
     ),
   );
 
@@ -236,7 +236,7 @@ function historiens_hus_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 5,
+      'weight' => 4,
     ),
   );
 
@@ -276,48 +276,7 @@ function historiens_hus_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 3,
-    ),
-  );
-
-  // Exported field_instance: 'node-lokale_booking-field_etiket'
-  $field_instances['node-lokale_booking-field_etiket'] = array(
-    'bundle' => 'lokale_booking',
-    'default_value' => array(
-      0 => array(
-        'value' => 1,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 19,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_etiket',
-    'label' => 'Etiket',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 20,
+      'weight' => 12,
     ),
   );
 
@@ -363,7 +322,7 @@ function historiens_hus_features_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 11,
+      'weight' => 8,
     ),
   );
 
@@ -405,7 +364,7 @@ function historiens_hus_features_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 23,
+      'weight' => 17,
     ),
   );
 
@@ -432,7 +391,7 @@ function historiens_hus_features_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_foregning',
-    'label' => 'Foregning',
+    'label' => 'Forening',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -525,7 +484,7 @@ function historiens_hus_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -565,7 +524,7 @@ function historiens_hus_features_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 19,
+      'weight' => 15,
     ),
   );
 
@@ -592,169 +551,20 @@ function historiens_hus_features_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_lokale',
-    'label' => 'Lokale',
+    'label' => 'Lokal',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 0,
-      'module' => 'taxonomy',
+      'module' => 'options',
       'settings' => array(
         'autocomplete_path' => 'taxonomy/autocomplete',
         'size' => 60,
       ),
-      'type' => 'taxonomy_autocomplete',
-      'weight' => 10,
-    ),
-  );
-
-  // Exported field_instance: 'node-lokale_booking-field_send_bekr_ftelse'
-  $field_instances['node-lokale_booking-field_send_bekr_ftelse'] = array(
-    'bundle' => 'lokale_booking',
-    'default_value' => array(
-      0 => array(
-        'value' => 1,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 21,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_send_bekr_ftelse',
-    'label' => 'Send Bekræftelse',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'display_label' => 1,
-      ),
-      'type' => 'options_onoff',
-      'weight' => 21,
-    ),
-  );
-
-  // Exported field_instance: 'node-lokale_booking-field_slut_dato'
-  $field_instances['node-lokale_booking-field_slut_dato'] = array(
-    'bundle' => 'lokale_booking',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-        ),
-        'type' => 'date_default',
-        'weight' => 24,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_slut_dato',
-    'label' => 'Slut dato',
-    'required' => 0,
-    'settings' => array(
-      'default_value' => 'blank',
-      'default_value2' => 'same',
-      'default_value_code' => '',
-      'default_value_code2' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'date',
-      'settings' => array(
-        'increment' => 15,
-        'input_format' => 'm/d/Y - H:i:s',
-        'input_format_custom' => '',
-        'label_position' => 'above',
-        'text_parts' => array(),
-        'year_range' => '-3:+3',
-      ),
-      'type' => 'date_popup',
-      'weight' => 14,
-    ),
-  );
-
-  // Exported field_instance: 'node-lokale_booking-field_slut_tidspunkt'
-  $field_instances['node-lokale_booking-field_slut_tidspunkt'] = array(
-    'bundle' => 'lokale_booking',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-        ),
-        'type' => 'date_default',
-        'weight' => 31,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_slut_tidspunkt',
-    'label' => 'Slut tidspunkt',
-    'required' => 1,
-    'settings' => array(
-      'default_value' => 'blank',
-      'default_value2' => 'same',
-      'default_value_code' => '',
-      'default_value_code2' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'date',
-      'settings' => array(
-        'increment' => 5,
-        'input_format' => 'custom',
-        'input_format_custom' => 'H:i',
-        'label_position' => 'above',
-        'text_parts' => array(),
-        'year_range' => '-0:+3',
-      ),
-      'type' => 'date_select',
-      'weight' => 15,
+      'type' => 'options_select',
+      'weight' => 9,
     ),
   );
 
@@ -790,62 +600,9 @@ function historiens_hus_features_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'default_value' => 'now',
-      'default_value2' => 'same',
+      'default_value2' => 'strtotime',
       'default_value_code' => '',
-      'default_value_code2' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'date',
-      'settings' => array(
-        'increment' => 15,
-        'input_format' => 'm/d/Y - H:i:s',
-        'input_format_custom' => '',
-        'label_position' => 'above',
-        'text_parts' => array(),
-        'year_range' => '-3:+3',
-      ),
-      'type' => 'date_popup',
-      'weight' => 12,
-    ),
-  );
-
-  // Exported field_instance: 'node-lokale_booking-field_start_tidspunkt'
-  $field_instances['node-lokale_booking-field_start_tidspunkt'] = array(
-    'bundle' => 'lokale_booking',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-        ),
-        'type' => 'date_default',
-        'weight' => 30,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_start_tidspunkt',
-    'label' => 'Start tidspunkt',
-    'required' => 1,
-    'settings' => array(
-      'default_value' => 'blank',
-      'default_value2' => 'same',
-      'default_value_code' => '',
-      'default_value_code2' => '',
+      'default_value_code2' => '+1 hour',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -853,14 +610,14 @@ function historiens_hus_features_field_default_field_instances() {
       'module' => 'date',
       'settings' => array(
         'increment' => 5,
-        'input_format' => 'custom',
-        'input_format_custom' => 'H:i',
+        'input_format' => 'm/d/Y - H:i:s',
+        'input_format_custom' => '',
         'label_position' => 'above',
         'text_parts' => array(),
         'year_range' => '-0:+3',
       ),
-      'type' => 'date_select',
-      'weight' => 13,
+      'type' => 'date_popup',
+      'weight' => 11,
     ),
   );
 
@@ -900,53 +657,7 @@ function historiens_hus_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'options_select',
-      'weight' => 17,
-    ),
-  );
-
-  // Exported field_instance: 'node-lokale_booking-field_tlf_arbejde'
-  $field_instances['node-lokale_booking-field_tlf_arbejde'] = array(
-    'bundle' => 'lokale_booking',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => ' ',
-        ),
-        'type' => 'number_integer',
-        'weight' => 6,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_tlf_arbejde',
-    'label' => 'Tlf. Arbejde',
-    'required' => 0,
-    'settings' => array(
-      'max' => '',
-      'min' => '',
-      'prefix' => '',
-      'suffix' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'number',
-      'settings' => array(),
-      'type' => 'number',
-      'weight' => 7,
+      'weight' => 10,
     ),
   );
 
@@ -978,7 +689,7 @@ function historiens_hus_features_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_tlf_privat',
-    'label' => 'Tlf. privat',
+    'label' => 'Telefon',
     'required' => 0,
     'settings' => array(
       'max' => '',
@@ -1032,7 +743,7 @@ function historiens_hus_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 16,
+      'weight' => 13,
     ),
   );
 
@@ -1044,21 +755,15 @@ function historiens_hus_features_field_default_field_instances() {
   t('E-mail');
   t('Efternavn');
   t('Emne');
-  t('Etiket');
   t('Fax');
   t('For 2');
-  t('Foregning');
+  t('Forening');
   t('Fornavn');
   t('Husk');
-  t('Lokale');
-  t('Send Bekræftelse');
-  t('Slut dato');
-  t('Slut tidspunkt');
+  t('Lokal');
   t('Start dato');
-  t('Start tidspunkt');
   t('Sted');
-  t('Tlf. Arbejde');
-  t('Tlf. privat');
+  t('Telefon');
   t('Uge');
   t('first_open');
 

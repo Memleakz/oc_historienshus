@@ -16,7 +16,6 @@ and open the template in the editor.
 }
 .views-exposed-widget
 {
-    width: 15% !important;
     float:left;
     padding-right: 5px !important;
 }
@@ -24,11 +23,31 @@ and open the template in the editor.
 {
     width: 8% !important;
 }
-.div.views-exposed-widget.views-submit-button button
-{
-    width: auto !important;
-    float:left !important;
-}
 .div.views-exposed-widget.views-submit-button{
     width: 100% !important;
+}
+.views-row{
+    float:left;
+    width: 100%;
+}
+.view-lokale-bookinger .view-content{
+    float:left;
+    width: 100%;
+}
+.view-lokale-bookinger .view-content .views-row .views-field{
+    float:left;
+    margin: 5px;
+    width: 200px;
+    height: 100px;
+    word-break: break-all;
+}
+.view-lokale-bookinger .view-content .views-row{
+    border-top: 1px solid black;
+}
+.views-field-edit-node , .views-field-view-node , .views-field-nothing, .views-field-nothing-1
+{
+    margin:5px 5px 0px 0px !important;
+    min-width: 0% !important;
+     width: auto !important;
+    height:auto !important;
 }
