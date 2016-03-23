@@ -1,4 +1,76 @@
 <?php
+/**
+ * Implements hook_menu().
+ */
+function oc_historienshus_menu() {
+  $items = array();
+     $items['oc/lokale_booking/ajax_bekræft/%'] = array(
+    'page callback' => 'oc_historienshus_ajax_confirm_booking', // Render HTML
+    'description' => 'Bekræfter en booking',
+    'page arguments' => array(3),
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('access content'),
+   );
+     
+   $items['oc/lokale_booking/labels/%'] = array(
+    'page callback' => 'oc_historienshus_create_mail_labels_pdf', // Render HTML
+    'description' => 'Printer labels for alle med samme navn/foregning',
+    'page arguments' => array(3),
+    'type' => MENU_CALLBACK,
+    'access arguments' => array('access content'),
+   );
+   
+   return $items;
+}
+/*
+ * Custom ajax function to handle confirming a booking.
+ */
+function oc_historienshus_ajax_confirm_booking($nid)
+{
+    $wrapper = entity_metadata_wrapper('node',node_load($nid));
+    if($wrapper->field_bekr_ftet->value() == 0)
+    {
+        $wrapper->field_bekr_ftet->set(1);
+        $wrapper->save();
+        echo json_encode('1');
+
+    }
+    else
+    {
+        $wrapper->field_bekr_ftet->set(0);
+        $wrapper->save();
+        echo json_encode('0');
+    }
+    drupal_exit();
+}
+/*
+ * Custom function to handle printing of labels for mail headers
+ * created from the bookings.
+ */
+function oc_historienshus_create_mail_labels_pdf($nid)
+{
+     $node = node_load($nid); 
+     $query = new EntityFieldQuery();
+     $result = $query
+    ->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'lokale_booking')
+    ->fieldCondition('field_fornavn', 'value', $node->field_fornavn['und'][0]['value'], '=')
+    ->fieldCondition('field_efternavn','value', $node->field_efternavn['und'][0]['value'], '=')
+    ->propertyCondition('status', NODE_PUBLISHED)
+    ->execute();
+     
+     $pdf_filename = "Labels";
+     $meta = array(
+      'node' => $node,
+      'url' => url(drupal_get_path_alias(empty($node->nid) ? $node->path : "node/$node->nid"), array('absolute' => TRUE)),
+    );
+    if (isset($node->name)) $meta['name'] = $node->name;
+    if (isset($node->title)) $meta['title'] = $node->title;
+     $html = theme('print__pdf__node_labels', $variables = array('nodes' => $result));
+     $pdf = print_pdf_generate_html($html,$meta);
+     print_pdf_dispose_content($pdf, $pdf_filename);
+     drupal_exit();
+}
 /*
  * Alter the default pdf print text for lokale_booking content type.
  */
@@ -6,6 +78,7 @@ function oc_historienshus_node_view_alter(&$build)
 {
     if($build['#bundle'] == "lokale_booking")
     {
+        
         hide($build['links']['print_html']);
         if(isset($build['links']['print_pdf']['#links']['print_pdf']['title']))
         {
@@ -37,6 +110,7 @@ function oc_historienshus_views_pre_render(&$view)
 {
     if($view->name == "lokale_bookinger")
     {
+        drupal_add_js(drupal_get_path('module', 'oc_historienshus') . "/js/oc_historienshus.js");
         drupal_add_css(drupal_get_path('module', 'oc_historienshus') . '/css/lokale_booking_view.css');
         /*
          * Alter the date stuff to make sense for the user.

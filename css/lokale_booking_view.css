@@ -51,7 +51,7 @@ and open the template in the editor.
 .view-lokale-bookinger .view-content .views-row{
     border-top: 1px solid black;
 }
-.views-field-edit-node , .views-field-view-node , .views-field-nothing, .views-field-nothing-1
+.views-field-edit-node , .views-field-view-node , .views-field-nothing, .views-field-nothing-1,.views-field-nothing-2
 {
     margin:5px 5px 0px 0px !important;
     min-width: 0% !important;
@@ -61,4 +61,10 @@ and open the template in the editor.
 .views-row-odd
 {
     background-color: lightgrey;
+}
+.unconfirmed{
+    color: red;
+}
+.confirmed{
+    color: green;
 }
