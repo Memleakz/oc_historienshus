@@ -20,8 +20,8 @@ foreach($nodes['node'] as $node_info)
     
     $foregning_set = $wrapper->__isset('field_foregning');
 ?>
-<div id="label_container" style="font-size: 12px;margin:5px;padding:5px;float:left;width:30%;height: 150px;border: 1 px dashed">
-    <div id=""><span style="float:left"><?php echo $sted->name; ?></span><span style="float:right"><?php echo $start_date ."<br/>".$start_time."-". $slut_time;?></span></div><br/><br/>
+<div id="label_container" style="font-size: 14px;margin:5px;padding:5px;float:left;width:30%;height: 150px;border: 1 px dashed">
+    <div id=""><span style="float:left"><b><?php echo $sted->name; ?></b></span><span style="float:right"><?php echo $start_date ."<br/>".$start_time."-". $slut_time;?></span></div><br/><br/>
     <span style="float:left"><?php echo "Forening:".$foregning_set && is_string($wrapper->field_foregning->value()) ? $wrapper->field_foregning->value() : ""; ?></span><br/>
     <span style="float:left;width:100%;"><?php echo $wrapper->field_fornavn->value() . " " . $wrapper->field_efternavn->value(); ?></span><br/>
     <span style="float:left;width:100%;">
@@ -29,7 +29,7 @@ foreach($nodes['node'] as $node_info)
         <?php echo $Adresse['postal_code'] . " " . $Adresse['thoroughfare']; ?>
     
     </span>
-    <span style="float:left;width:100%;"><?php echo "Telefon: "; echo $wrapper->__isset('field_tlf_privat') ? $wrapper->field_tlf_privat->value() : "" ?></span>
+    <span style="float:left;width:100%;"><?php echo $wrapper->__isset('field_tlf_privat') ? $wrapper->field_tlf_privat->value() : "" ?></span>
 </div>
 <?php
 }

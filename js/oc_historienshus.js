@@ -16,10 +16,11 @@ jQuery( document ).ready(function() {
                     url: "/oc/lokale_booking/ajax_bekræft/" +nid,
                   })
                     .done(function( msg ) {
-                      alert( "Data Saved: " + msg );
+                      
                       elem.text('Bekræftet');
                       elem.removeClass('unconfirmed');
                       elem.addClass('confirmed');
+                      alert( "Booking bekræftet." );
                     });
              
             } 
