@@ -54,7 +54,9 @@ Slut: [field_start_dato-value2]';
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nid']['element_wrapper_class'] = 'js-hide';
   /* Field: Content: Emne */
   $handler->display->display_options['fields']['field_emne']['id'] = 'field_emne';
   $handler->display->display_options['fields']['field_emne']['table'] = 'field_data_field_emne';
@@ -110,6 +112,8 @@ Slut: [field_start_dato-value2]';
   $handler->display->display_options['fields']['field_tlf_privat']['id'] = 'field_tlf_privat';
   $handler->display->display_options['fields']['field_tlf_privat']['table'] = 'field_data_field_tlf_privat';
   $handler->display->display_options['fields']['field_tlf_privat']['field'] = 'field_tlf_privat';
+  $handler->display->display_options['fields']['field_tlf_privat']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_tlf_privat']['alter']['text'] = '<a target="_blank" href="tel:[field_tlf_privat-value]">[field_tlf_privat-value]</a>';
   $handler->display->display_options['fields']['field_tlf_privat']['element_label_type'] = 'strong';
   $handler->display->display_options['fields']['field_tlf_privat']['settings'] = array(
     'thousand_separator' => ' ',
@@ -119,12 +123,24 @@ Slut: [field_start_dato-value2]';
   $handler->display->display_options['fields']['field_bekr_ftet']['id'] = 'field_bekr_ftet';
   $handler->display->display_options['fields']['field_bekr_ftet']['table'] = 'field_data_field_bekr_ftet';
   $handler->display->display_options['fields']['field_bekr_ftet']['field'] = 'field_bekr_ftet';
-  $handler->display->display_options['fields']['field_bekr_ftet']['element_class'] = 'booking-confirm';
+  $handler->display->display_options['fields']['field_bekr_ftet']['label'] = 'Status';
+  $handler->display->display_options['fields']['field_bekr_ftet']['alter']['path'] = '/oc/booking/bekræft';
+  $handler->display->display_options['fields']['field_bekr_ftet']['alter']['alt'] = 'Bekræft booking.';
+  $handler->display->display_options['fields']['field_bekr_ftet']['element_class'] = 'unconfirmed';
   $handler->display->display_options['fields']['field_bekr_ftet']['element_label_type'] = 'strong';
-  /* Field: Global: Custom text */
+  /* Field: Bekræft kanp */
+  $handler->display->display_options['fields']['nothing_2']['id'] = 'nothing_2';
+  $handler->display->display_options['fields']['nothing_2']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing_2']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing_2']['ui_name'] = 'Bekræft kanp';
+  $handler->display->display_options['fields']['nothing_2']['label'] = '';
+  $handler->display->display_options['fields']['nothing_2']['alter']['text'] = '<a class="booking-confirm btn btn-default">Bekræft</a>';
+  $handler->display->display_options['fields']['nothing_2']['element_label_colon'] = FALSE;
+  /* Field: Print kvittering */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Print kvittering';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = 'Print Kvittering';
   $handler->display->display_options['fields']['nothing']['alter']['make_link'] = TRUE;
@@ -133,21 +149,23 @@ Slut: [field_start_dato-value2]';
   $handler->display->display_options['fields']['nothing']['alter']['link_class'] = 'btn btn-default';
   $handler->display->display_options['fields']['nothing']['alter']['target'] = '_blank';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  /* Field: print labels */
+  $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
+  $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing_1']['ui_name'] = 'print labels';
+  $handler->display->display_options['fields']['nothing_1']['label'] = '';
+  $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '<a target="_blank" title="Print labels for alle bookinger med samme navn" class="btn btn-default" href="/oc/lokale_booking/labels/[nid]">Labels</a>';
+  $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   /* Field: Content: Edit link */
   $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['label'] = '';
+  $handler->display->display_options['fields']['edit_node']['alter']['target'] = '_blank';
   $handler->display->display_options['fields']['edit_node']['element_class'] = 'btn btn-default';
   $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['edit_node']['text'] = 'Rediger';
-  /* Field: Global: Custom text */
-  $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
-  $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing_1']['label'] = '';
-  $handler->display->display_options['fields']['nothing_1']['alter']['text'] = '<a title="Print labels for alle bookinger med samme navn" class="btn btn-default" href="/">Labels</a>';
-  $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
   /* Field: Content: Link */
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
@@ -286,7 +304,6 @@ Slut: [field_start_dato-value2]';
     t('Dato'),
     t('Start: [field_start_dato-value]
 Slut: [field_start_dato-value2]'),
-    t('Nid'),
     t('Emne'),
     t('Foregning'),
     t('Foregning 2'),
@@ -296,11 +313,14 @@ Slut: [field_start_dato-value2]'),
     t('E-mail'),
     t('<a href="mailto:[field_e_mail]">[field_e_mail]</a>'),
     t('Telefon'),
-    t('Bekræftet'),
+    t('<a target="_blank" href="tel:[field_tlf_privat-value]">[field_tlf_privat-value]</a>'),
+    t('Status'),
+    t('Bekræft booking.'),
+    t('<a class="booking-confirm btn btn-default">Bekræft</a>'),
     t('Print Kvittering'),
     t('Print pdf kvittering.'),
+    t('<a target="_blank" title="Print labels for alle bookinger med samme navn" class="btn btn-default" href="/oc/lokale_booking/labels/[nid]">Labels</a>'),
     t('Rediger'),
-    t('<a title="Print labels for alle bookinger med samme navn" class="btn btn-default" href="/">Labels</a>'),
     t('<button href="/node/[nid]">Se mere</button>'),
     t('Se mere'),
     t('Start dato'),

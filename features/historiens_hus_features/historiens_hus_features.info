@@ -1,7 +1,7 @@
 name = Historiens hus features
 core = 7.x
 package = OC
-version = 7.x-1.1
+version = 7.x-1.2
 project = historiens_hus_features
 dependencies[] = addressfield
 dependencies[] = date
