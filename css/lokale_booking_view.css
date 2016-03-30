@@ -14,23 +14,6 @@ and open the template in the editor.
 {
     background-color: white;
 }
-.views-exposed-widget
-{
-    float:left;
-}
-.views-widget-filter-field_start_dato_value
-{
-    width: 8% !important;
-}
-.views-submit-button{
-    float:left !important;
-}
-.views-submit-button .btn{
-    margin-top: 20px !important;
-}
-.views-reset-button .btn{
-    margin-top: 28px !important;
-}
 .views-row{
     float:left;
     width: 100%;
