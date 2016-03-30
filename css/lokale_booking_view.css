@@ -62,7 +62,7 @@ and open the template in the editor.
 @media (min-width: 768px) { 
     .views-exposed-widget
     {
-        width: 100%;
+        width: 100% !important;
         margin:.5em 1em 0 0 !important;
     }
 }
@@ -71,7 +71,7 @@ and open the template in the editor.
 @media (min-width: 992px) {     
     .views-exposed-widget
     {
-        width: auto;
+        width: auto !important;
         margin:.5em 1em 0 0 !important;
     }
 }
@@ -80,7 +80,7 @@ and open the template in the editor.
 @media (min-width: 1200px) { 
     .views-exposed-widget
     {
-        width: auto;
+        width: auto !important;
         margin:.5em 1em 0 0 !important;
     }
 }
