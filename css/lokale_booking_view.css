@@ -14,6 +14,15 @@ and open the template in the editor.
 {
     background-color: white;
 }
+.views-exposed-widget
+{
+    width: 25%;
+    margin:.5em 1em 0 0 !important;
+}
+.views-exposed-widget .views-submit-button , .views-reset-button
+{
+    float: left !important; 
+}
 .views-row{
     float:left;
     width: 100%;
@@ -48,4 +57,30 @@ and open the template in the editor.
 }
 .confirmed{
     color: green;
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .views-exposed-widget
+    {
+        width: 100%;
+        margin:.5em 1em 0 0 !important;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {     
+    .views-exposed-widget
+    {
+        width: auto;
+        margin:.5em 1em 0 0 !important;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    .views-exposed-widget
+    {
+        width: auto;
+        margin:.5em 1em 0 0 !important;
+    }
 }
