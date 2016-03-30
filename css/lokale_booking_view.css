@@ -19,7 +19,7 @@ and open the template in the editor.
     width: 25%;
     margin:.5em 1em 0 0 !important;
 }
-.views-exposed-widget .views-submit-button , .views-reset-button
+.views-submit-button , .views-reset-button
 {
     float: left !important; 
 }
