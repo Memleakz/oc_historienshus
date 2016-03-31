@@ -25,7 +25,10 @@ function historiens_hus_features_views_default_views() {
   $handler->display->display_options['title'] = 'Lokale bookinger';
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['access']['type'] = 'role';
+  $handler->display->display_options['access']['role'] = array(
+    5 => '5',
+  );
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -231,24 +234,6 @@ Slut: [field_start_dato-value2]';
     3 => 0,
   );
   $handler->display->display_options['filters']['field_foregning_tid']['vocabulary'] = 'foregninger';
-  /* Filter criterion: Content: Lokal (field_lokale) */
-  $handler->display->display_options['filters']['field_lokale_tid']['id'] = 'field_lokale_tid';
-  $handler->display->display_options['filters']['field_lokale_tid']['table'] = 'field_data_field_lokale';
-  $handler->display->display_options['filters']['field_lokale_tid']['field'] = 'field_lokale_tid';
-  $handler->display->display_options['filters']['field_lokale_tid']['value'] = '';
-  $handler->display->display_options['filters']['field_lokale_tid']['group'] = 1;
-  $handler->display->display_options['filters']['field_lokale_tid']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_lokale_tid']['expose']['operator_id'] = 'field_lokale_tid_op';
-  $handler->display->display_options['filters']['field_lokale_tid']['expose']['label'] = 'Lokal';
-  $handler->display->display_options['filters']['field_lokale_tid']['expose']['operator'] = 'field_lokale_tid_op';
-  $handler->display->display_options['filters']['field_lokale_tid']['expose']['identifier'] = 'field_lokale_tid';
-  $handler->display->display_options['filters']['field_lokale_tid']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    5 => 0,
-  );
-  $handler->display->display_options['filters']['field_lokale_tid']['vocabulary'] = 'lokaler';
   /* Filter criterion: Content: E-mail (field_e_mail) */
   $handler->display->display_options['filters']['field_e_mail_value']['id'] = 'field_e_mail_value';
   $handler->display->display_options['filters']['field_e_mail_value']['table'] = 'field_data_field_e_mail';
@@ -285,6 +270,12 @@ Slut: [field_start_dato-value2]';
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['path'] = 'lokale-bookinger';
+  $handler->display->display_options['menu']['type'] = 'normal';
+  $handler->display->display_options['menu']['title'] = 'Lokale bookinger';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['name'] = 'main-menu';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
   $translatables['lokale_bookinger'] = array(
     t('Master'),
     t('Lokale bookinger'),
@@ -324,7 +315,6 @@ Slut: [field_start_dato-value2]'),
     t('<button href="/node/[nid]">Se mere</button>'),
     t('Se mere'),
     t('Start dato'),
-    t('Lokal'),
     t('Tlf'),
     t('Page'),
   );
