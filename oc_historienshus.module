@@ -78,7 +78,7 @@ function oc_historienshus_node_view_alter(&$build)
 {
     if($build['#bundle'] == "lokale_booking")
     {
-        
+        drupal_add_css(drupal_get_path('module', 'oc_historienshus') . '/css/node_view_alter.css');
         hide($build['links']['print_html']);
         if(isset($build['links']['print_pdf']['#links']['print_pdf']['title']))
         {
