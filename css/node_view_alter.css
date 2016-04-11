@@ -11,3 +11,6 @@ and open the template in the editor.
 {
     background-color: white !important;
 }
+.field{
+    margin: 5px;
+}
