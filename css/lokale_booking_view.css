@@ -44,7 +44,6 @@ and open the template in the editor.
 }
 .views-field-edit-node , .views-field-view-node , .views-field-nothing, .views-field-nothing-1,.views-field-nothing-2
 {
-    margin:5px 5px 0px 0px !important;
     min-width: 0% !important;
      width: auto !important;
     height:auto !important;
@@ -71,10 +70,7 @@ div.views-exposed-widget.views-submit-button button
 {
     padding-bottom: 5px !important;
 }
-.views-field views-field-nothing-2
-{
-    margin-left: 5px;
-}
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
     .views-exposed-widget
