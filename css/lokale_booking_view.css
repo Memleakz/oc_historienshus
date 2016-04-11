@@ -36,7 +36,7 @@ and open the template in the editor.
     margin: 5px;
     min-width: 100px;
     height: 100px;
-    
+    padding: 5px;
 }
 .view-lokale-bookinger .view-content .views-row{
     border-top: 1px solid black;
