@@ -94,6 +94,7 @@ function oc_historienshus_node_view_alter(&$build)
             $wrapper->save();
             drupal_add_js('jQuery(document).ready(function () {window.open("/printpdf/'.$build['#node']->nid.'") });', 'inline');
         }
+       
     }
 }
 /*

@@ -58,6 +58,10 @@ and open the template in the editor.
 .confirmed{
     color: green;
 }
+.div.views-exposed-widget.views-submit-button button
+{
+    width: 100%;
+}
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
     .views-exposed-widget
