@@ -63,6 +63,14 @@ div.views-exposed-widget.views-submit-button button
 {
     width: 100% !important;
 }
+.button-seperator{
+    width:100%;
+    height: 5px;
+}
+.views-row 
+{
+    padding-bottom: 5px;
+}
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
     .views-exposed-widget
