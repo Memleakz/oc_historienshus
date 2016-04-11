@@ -31,15 +31,7 @@ and open the template in the editor.
     float:left;
     width: 100%;
 }
-.view-lokale-bookinger .view-content .views-row .views-field{
-    float:left;
-    margin: 5px;
-    min-width: 100px;
-    width: 15%;
-    height: 100px;
-    word-break: break-all;
-    
-}
+
 .view-lokale-bookinger .view-content .views-row{
     border-top: 1px solid black;
 }
@@ -73,7 +65,7 @@ div.views-exposed-widget.views-submit-button button
 }
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
+@media (max-width: 768px) { 
     .views-exposed-widget
     {
         width: 100% !important;
@@ -87,6 +79,15 @@ div.views-exposed-widget.views-submit-button button
     .view-lokale-bookinger .view-content .views-row .views-field{
         width: 100% !important;
     }
+    .view-lokale-bookinger .view-content .views-row .views-field{
+        float:left;
+        margin: 5px;
+        min-width: 100px;
+        width: 50%;
+        height: 100px;
+        word-break: break-all;
+
+    }
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -96,6 +97,15 @@ div.views-exposed-widget.views-submit-button button
         width: auto !important;
         margin:.5em 1em 0 0 !important;
     }
+    .view-lokale-bookinger .view-content .views-row .views-field{
+        float:left;
+        margin: 5px;
+        min-width: 100px;
+        width: 15%;
+        height: 100px;
+        word-break: break-all;
+
+    }
 }
 
 /* Large devices (large desktops, 1200px and up) */
@@ -104,5 +114,14 @@ div.views-exposed-widget.views-submit-button button
     {
         width: auto !important;
         margin:.5em 1em 0 0 !important;
+    }
+    .view-lokale-bookinger .view-content .views-row .views-field{
+        float:left;
+        margin: 5px;
+        min-width: 100px;
+        width: 15%;
+        height: 100px;
+        word-break: break-all;
+
     }
 }
