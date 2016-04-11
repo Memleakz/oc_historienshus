@@ -37,7 +37,7 @@ and open the template in the editor.
     min-width: 100px;
     width: 15%;
     height: 100px;
-    word-break: break-all;
+    
 }
 .view-lokale-bookinger .view-content .views-row{
     border-top: 1px solid black;
