@@ -84,6 +84,15 @@ div.views-exposed-widget.views-submit-button button
         float: left !important; 
         width: 100% !important;
     }
+    .view-lokale-bookinger .view-content .views-row .views-field{
+    float:left;
+    margin: 5px;
+    min-width: 100px;
+    width: 50%;
+    height: 100px;
+    word-break: break-all;
+    
+    }
 }
 
 /* Medium devices (desktops, 992px and up) */
