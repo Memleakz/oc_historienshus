@@ -71,6 +71,10 @@ div.views-exposed-widget.views-submit-button button
 {
     padding-bottom: 5px !important;
 }
+.views-field views-field-nothing-2
+{
+    margin-left: 5px;
+}
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
     .views-exposed-widget
