@@ -25,3 +25,7 @@ and open the template in the editor.
 {
     float: left;
 }
+.form-item-field-adresse-und-0-country
+{
+    display:none;
+}
