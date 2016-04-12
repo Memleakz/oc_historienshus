@@ -43,7 +43,7 @@ $Addresse_data = $wrapper->field_adresse->value();
 	</div>
 	<div style="float:left;width:75%;">
         <p><?php echo date("j F, Y") ?></p>
-	<p><?php echo "VEDR." . $wrapper->field_sted->value()->name . ", Klosterbakken 2" ?></p>
+	<p><?php echo "Vedr. " . $wrapper->field_sted->value()->name . ", Klosterbakken 2" ?></p>
 	<p>Hermed bekræftes, at Mødelokalet er reserveret til jer <?php echo $start_date  ?>,
 		  kl.<?php echo $start_time ?>-<?php echo $slut_time ?></p>
     <p>Som det vil være bekendt, har der pågået drøftelser i Odense Kommune
@@ -114,13 +114,13 @@ $Addresse_data = $wrapper->field_adresse->value();
             <p>NØGLEKVITTERING</p>
         </div>
         <div style="float:left;width:100%;">
-            <p>For modtagelse af Nøgle nr._____________________ </p>
+            <p>For modtagelse af nøgle nr._____________________ </p>
             <p>i forbindelse med lån af Mødelokalet den. <?php echo $start_date  ?> kvitteres hermed:</p>
             <p><span style="padding-right:5em">Dato:____________</span><span>Underskrift:___________________________</span></p><br/>
             <hr>
             <p>Nøglen er modtaget retur den._______________</p>
             <p>Bemærkninger:</p><br/><br/><br/><br/>
-            <p>Hvis der er forhold, der ikke svare til det forventede, eller hvis der er forslag<br/>til forandringer og forbedringer , høre vi gerne nærmere </p>
+            <p>Hvis der er forhold, der ikke svare til det forventede, eller hvis der er forslag<br/>til forandringer og forbedringer, hører vi gerne nærmere </p>
             <p>
 		Med venlig hilsen
             </p>
