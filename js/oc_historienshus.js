@@ -1,6 +1,6 @@
 jQuery( document ).ready(function() {
     Update_confirmed_colors();
-   jQuery('.booking-confirm').click(function(e){
+   jQuery('body').on('click','.booking-confirm',function(e){
        //jQuery('#confirm_booking_dialog').modal('show');
       
        
