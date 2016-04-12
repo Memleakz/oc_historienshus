@@ -1,9 +1,6 @@
 jQuery( document ).ready(function() {
     Update_confirmed_colors();
-   jQuery('body').on('click','.booking-confirm',function(e){
-       //jQuery('#confirm_booking_dialog').modal('show');
-      
-       
+   /*jQuery('body').on('click','.booking-confirm',function(e){
         var target = jQuery(e.target);
         var elem = target.parent().parent().parent().find('.views-field-field-bekr-ftet .field-content');
         var nid = target.parent().parent().parent().find('.views-field-nid .field-content').text();
@@ -26,10 +23,9 @@ jQuery( document ).ready(function() {
             } 
         }
        e.preventDefault();
-   });
+   });*/
    function Update_confirmed_colors()
    {
-        debugger;
        var elem = jQuery('.views-row').find('.views-field-field-bekr-ftet .field-content');
        jQuery.each(elem,function(index,field){
             field = jQuery(field);

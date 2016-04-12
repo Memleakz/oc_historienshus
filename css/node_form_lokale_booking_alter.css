@@ -7,15 +7,21 @@ and open the template in the editor.
     Created on : 17-03-2016, 08:23:09
     Author     : tfpet
 */
-.form-item-field-start-tidspunkt-und-0-value-date
-{
-    display:none;
-}
-.form-item-field-slut-tidspunkt-und-0-value-date
-{
-    display:none;
-}
 #edit-field-first-open
 {
     display:none;
+}
+.start-date-wrapper , .end-date-wrapper 
+{
+    width: auto !important;
+    clear: none !important;
+    float:left;
+}
+.form-item-field-start-dato-und-0-value2-date
+{
+    display:none;
+}
+.form-item-field-start-dato-und-0-value2 label
+{
+    float: left;
 }

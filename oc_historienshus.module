@@ -79,6 +79,7 @@ function oc_historienshus_node_view_alter(&$build)
     if($build['#bundle'] == "lokale_booking")
     {
         drupal_add_css(drupal_get_path('module', 'oc_historienshus') . '/css/node_view_alter.css');
+        
         hide($build['links']['print_html']);
         if(isset($build['links']['print_pdf']['#links']['print_pdf']['title']))
         {
@@ -103,6 +104,7 @@ function oc_historienshus_node_view_alter(&$build)
 function oc_historienshus_form_lokale_booking_node_form_alter(&$form, &$form_state, $form_id)
 {
        drupal_add_css(drupal_get_path('module', 'oc_historienshus') . '/css/node_form_lokale_booking_alter.css');
+       drupal_add_js(drupal_get_path('module', 'oc_historienshus') . '/js/node_form_lokale_booking_alter.js');
 }
 /*
  * Add styling to custom views.
@@ -124,7 +126,7 @@ function oc_historienshus_views_pre_render(&$view)
             $end_date = date("d/m/Y",strtotime($item->field_field_start_dato[0]['raw']['value2']));
             $end_time = date("H:i",strtotime($item->field_field_start_dato[0]['raw']['value2']));
 
-            $Final_string = "Start: {$start_date}<br/>Slut: {$end_date}<br/>{$start_time}-{$end_time}";
+            $Final_string = "Start: {$start_date}<br/>{$start_time}-{$end_time}";
             $item->field_field_start_dato[0]['rendered']['#markup'] = $Final_string;
         }
     }

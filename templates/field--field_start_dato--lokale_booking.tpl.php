@@ -64,7 +64,7 @@ HTML comment.
             $end_date = date("d/m/Y",strtotime($element['#object']->field_start_dato['und'][0]['value2']));
             $end_time = date("H:i",strtotime($element['#object']->field_start_dato['und'][0]['value2']));
 
-            $Final_string = "Start: {$start_date}<br/>Slut: {$end_date}<br/>{$start_time}-{$end_time}";
+            $Final_string = "Start: {$start_date}<br/>{$start_time}-{$end_time}";
             echo $Final_string;
             ?>
       </div>
