@@ -44,10 +44,10 @@ $Addresse_data = $wrapper->field_adresse->value();
         </b>
 	</div>
 	<div style="float:left;width:75%;">
-        <p><?php echo date("j. F, Y") ?></p>
+        <p><?php echo strtolower(date("j. F Y")) ?></p>
 	<p style="text-decoration: underline;"><?php echo "Vedr. " . $wrapper->field_sted->value()->name . ", Klosterbakken 2" ?></p>
 	<p>Hermed bekræftes, at <?php echo $wrapper->field_sted->value()->name ?> er reserveret til jer <?php echo $start_date  ?>,
-		  kl.<?php echo $start_time ?>-<?php echo $slut_time ?></p>
+		  kl.<?php echo $start_time ?> -<?php echo $slut_time ?>.</p>
     <p>Som det vil være bekendt, har der pågået drøftelser i Odense Kommune
 	   vedrørende indførelse af brugerbetaling for benyttelsen af lokalerne på
 	   Klosterbakken 2.</p>
@@ -89,8 +89,9 @@ $Addresse_data = $wrapper->field_adresse->value();
 		Med venlig hilsen
 	</p>
 	<p>
-		Historiens Hus<br/>
-		Ingrid Bundgaard
+                Ingrid Bundgaard<br/>
+		Historiens Hus
+		
 	</p>
         </div>
 	<!-- 
