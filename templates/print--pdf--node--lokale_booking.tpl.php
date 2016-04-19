@@ -26,7 +26,7 @@ $Addresse_data = $wrapper->field_adresse->value();
 </head>
 <body>
 <div style="width: 100%;">
-	<div style="float:left;width:50%;padding-top: 150px;">
+	<div style="float:left;width:50%;padding-top: 140px;">
 		<b>
 		<?php echo $wrapper->field_fornavn->value() . " " . $wrapper->field_efternavn->value(); ?><br/>
 		<?php echo $Addresse_data['thoroughfare'] ?><br/>
@@ -44,9 +44,9 @@ $Addresse_data = $wrapper->field_adresse->value();
         </b>
 	</div>
 	<div style="float:left;width:75%;">
-        <p><?php echo date("j F, Y") ?></p>
+        <p><?php echo date("j. F, Y") ?></p>
 	<p style="text-decoration: underline;"><?php echo "Vedr. " . $wrapper->field_sted->value()->name . ", Klosterbakken 2" ?></p>
-	<p>Hermed bekræftes, at Mødelokalet er reserveret til jer <?php echo $start_date  ?>,
+	<p>Hermed bekræftes, at <?php echo $wrapper->field_sted->value()->name ?> er reserveret til jer <?php echo $start_date  ?>,
 		  kl.<?php echo $start_time ?>-<?php echo $slut_time ?></p>
     <p>Som det vil være bekendt, har der pågået drøftelser i Odense Kommune
 	   vedrørende indførelse af brugerbetaling for benyttelsen af lokalerne på
@@ -76,7 +76,7 @@ $Addresse_data = $wrapper->field_adresse->value();
                 else
                 {
                     echo ", samtidig med der inden 14
-                            dage fra dato indbetales kr. 50 i kontanter eller med check.";
+                            dage fra dato indbetales kr. ".$wrapper->field_aktuel_leje->value()." i kontanter eller med check.";
                 }
                 ?>
 	</p>
@@ -97,7 +97,7 @@ $Addresse_data = $wrapper->field_adresse->value();
 	Page2
 	-->
         <div style="width: 100%;">
-            	<div style="float:left;width:50%;padding-top: 150px;">
+            	<div style="float:left;width:50%;padding-top: 140px;">
 		<b>
 		<?php echo $wrapper->field_fornavn->value() . " " . $wrapper->field_efternavn->value(); ?><br/>
 		<?php echo $Addresse_data['thoroughfare'] ?><br/>
@@ -118,7 +118,7 @@ $Addresse_data = $wrapper->field_adresse->value();
         </div>
         <div style="float:left;width:100%;">
             <p>For modtagelse af nøgle nr._____________________ </p>
-            <p>i forbindelse med lån af Mødelokalet den. <?php echo $start_date  ?> kvitteres hermed:</p>
+            <p>i forbindelse med lån af <?php echo $wrapper->field_sted->value()->name ?> den. <?php echo $start_date  ?> kvitteres hermed:</p>
             <p><span style="padding-right:5em">Dato:____________</span><span>Underskrift:___________________________</span></p><br/>
             <hr>
             <p>Nøglen er modtaget retur den._______________</p>
