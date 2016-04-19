@@ -39,11 +39,13 @@ $Addresse_data = $wrapper->field_adresse->value();
 	Odense Kommune<br/><br/>
 	Klosterbakken 2<br/>
 	5000 Odense C<br/>
-	Tlf 6551 4427</b>
+        Tlf 6551 4427<br/>
+        ibu@odense.dk
+        </b>
 	</div>
 	<div style="float:left;width:75%;">
         <p><?php echo date("j F, Y") ?></p>
-	<p><?php echo "Vedr. " . $wrapper->field_sted->value()->name . ", Klosterbakken 2" ?></p>
+	<p style="text-decoration: underline;"><?php echo "Vedr. " . $wrapper->field_sted->value()->name . ", Klosterbakken 2" ?></p>
 	<p>Hermed bekræftes, at Mødelokalet er reserveret til jer <?php echo $start_date  ?>,
 		  kl.<?php echo $start_time ?>-<?php echo $slut_time ?></p>
     <p>Som det vil være bekendt, har der pågået drøftelser i Odense Kommune
@@ -88,7 +90,7 @@ $Addresse_data = $wrapper->field_adresse->value();
 	</p>
 	<p>
 		Historiens Hus<br/>
-		ibu@odense.dk
+		Ingrid Bundgaard
 	</p>
         </div>
 	<!-- 
@@ -108,7 +110,8 @@ $Addresse_data = $wrapper->field_adresse->value();
                 Odense Kommune<br/><br/>
                 Klosterbakken 2<br/>
                 5000 Odense C<br/>
-                Tlf 6551 4427</b>
+                Tlf 6551 4427<br/>
+                ibu@odense.dk</b>
                 </div>
         <div style="float:left;width:100%;padding-top: 25px;text-align:center;">
             <p>NØGLEKVITTERING</p>
