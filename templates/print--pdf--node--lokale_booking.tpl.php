@@ -47,7 +47,7 @@ $Addresse_data = $wrapper->field_adresse->value();
         <p><?php echo strtolower(date("j. F Y")) ?></p>
 	<p style="text-decoration: underline;"><?php echo "Vedr. " . $wrapper->field_sted->value()->name . ", Klosterbakken 2" ?></p>
 	<p>Hermed bekræftes, at <?php echo $wrapper->field_sted->value()->name ?> er reserveret til jer <?php echo $start_date  ?>,
-		  kl.<?php echo $start_time ?> -<?php echo $slut_time ?>.</p>
+		  kl.<?php echo $start_time ?> - <?php echo $slut_time ?>.</p>
     <p>Som det vil være bekendt, har der pågået drøftelser i Odense Kommune
 	   vedrørende indførelse af brugerbetaling for benyttelsen af lokalerne på
 	   Klosterbakken 2.</p>
