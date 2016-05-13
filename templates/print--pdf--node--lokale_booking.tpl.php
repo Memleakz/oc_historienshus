@@ -17,7 +17,7 @@ $slut_dato = date('d/m/Y',strtotime($date_data['value2']));
 $slut_time = date("H:i", strtotime($date_data['value2']));
 
 $Addresse_data = $wrapper->field_adresse->value();
-
+echo setlocale(LC_TIME,"da");
 ?>
 <html>
 <head>
@@ -44,7 +44,7 @@ $Addresse_data = $wrapper->field_adresse->value();
         </b>
 	</div>
 	<div style="float:left;width:75%;">
-        <p><?php echo strtolower(date("j. F Y")) ?></p>
+        <p><?php echo strtolower(ddate("j. F Y",false)) ?></p>
 	<p style="text-decoration: underline;"><?php echo "Vedr. " . $wrapper->field_sted->value()->name . ", Klosterbakken 2" ?></p>
 	<p>Hermed bekræftes, at <?php echo $wrapper->field_sted->value()->name ?> er reserveret til jer <?php echo $start_date  ?>,
 		  kl.<?php echo $start_time ?> - <?php echo $slut_time ?>.</p>
