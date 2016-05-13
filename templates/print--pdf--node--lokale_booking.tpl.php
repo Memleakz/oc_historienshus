@@ -17,7 +17,9 @@ $slut_dato = date('d/m/Y',strtotime($date_data['value2']));
 $slut_time = date("H:i", strtotime($date_data['value2']));
 
 $Addresse_data = $wrapper->field_adresse->value();
-echo setlocale(LC_TIME,"da");
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 ?>
 <html>
 <head>
