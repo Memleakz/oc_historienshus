@@ -153,7 +153,7 @@ function oc_historienshus_theme_registry_alter(&$theme_registry) {
 /*
  * Function to make date strings danish
  */
-function ddate ($format,$timestamp) {
+function ddate ($format,$timestamp = false) {
 
 $trans = array(
     'Monday'    => 'Mandag',
