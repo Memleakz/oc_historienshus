@@ -17,6 +17,7 @@ $slut_dato = date('d/m/Y',strtotime($date_data['value2']));
 $slut_time = date("H:i", strtotime($date_data['value2']));
 
 $Addresse_data = $wrapper->field_adresse->value();
+$foregnings_obj = $wrapper->field_foregning->value();
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -30,6 +31,7 @@ error_reporting(E_ALL);
 <div style="width: 100%;">
 	<div style="float:left;width:50%;padding-top: 140px;">
 		<b>
+                <?php echo isset($foregnings_obj) ?   $foregnings_obj->name ."<br/>" : ''; ?>
 		<?php echo $wrapper->field_fornavn->value() . " " . $wrapper->field_efternavn->value(); ?><br/>
 		<?php echo $Addresse_data['thoroughfare'] ?><br/>
 		<?php echo $Addresse_data['postal_code'] . " " . $Addresse_data['locality']  ?><br/>
@@ -102,6 +104,7 @@ error_reporting(E_ALL);
         <div style="width: 100%;">
             	<div style="float:left;width:50%;padding-top: 140px;">
 		<b>
+                <?php echo isset($foregnings_obj) ?   $foregnings_obj->name ."<br/>" : ''; ?>
 		<?php echo $wrapper->field_fornavn->value() . " " . $wrapper->field_efternavn->value(); ?><br/>
 		<?php echo $Addresse_data['thoroughfare'] ?><br/>
 		<?php echo $Addresse_data['postal_code'] . " " . $Addresse_data['locality']  ?><br/>
