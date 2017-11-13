@@ -38,7 +38,7 @@ error_reporting(E_ALL);
                 </b>
 	</div>
 	<div style="float:right;width:50%;text-align: right;">
-	<img style="height:100px;" src="http://www.historienshus.dk/-/media/websites/historienshus/hh160x67.png?h=67&la=da&mw=200&w=160"><br/><br/>
+	<img style="height:100px;" src="https://it.odensebib.dk/sites/it.odensebib.dk/files/histhus_sort_rod_215.jpg"><br/><br/>
 	<b>By- og Kulturforvaltningen<br/>
 	Odense Kommune<br/><br/>
 	Klosterbakken 2<br/>
@@ -112,7 +112,7 @@ error_reporting(E_ALL);
                 </b>
                 </div>
                 <div style="float:right;width:50%;text-align: right;">
-                <img style="height:100px;" src="http://www.historienshus.dk/-/media/websites/historienshus/hh160x67.png?h=67&la=da&mw=200&w=160"><br/><br/>
+                <img style="height:100px;" src="https://it.odensebib.dk/sites/it.odensebib.dk/files/histhus_sort_rod_215.jpg"><br/><br/>
                 <b>By- og Kulturforvaltningen<br/>
                 Odense Kommune<br/><br/>
                 Klosterbakken 2<br/>
