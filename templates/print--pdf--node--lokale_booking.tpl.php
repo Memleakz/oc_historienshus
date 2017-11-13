@@ -80,7 +80,7 @@ error_reporting(E_ALL);
                 else
                 {
                     echo ", samtidig med der inden 14
-                            dage fra dato indbetales kr. ".$wrapper->field_aktuel_leje->value()." i kontanter eller med check.";
+                            dage fra dato indbetales kr. ".$wrapper->field_aktuel_leje->value()." i kontanter.";
                 }
                 ?>
 	</p>
