@@ -98,6 +98,7 @@ error_reporting(E_ALL);
 		
 	</p>
         </div>
+        <p style="page-break-after: always;">&nbsp;</p>
 	<!-- 
 	Page2
 	-->
@@ -111,7 +112,7 @@ error_reporting(E_ALL);
                 </b>
                 </div>
                 <div style="float:right;width:50%;text-align: right;">
-                <img style="height:100px;" src="http://www.historienshus.dk/-/media/websites/historienshus/hh160x67.png?h=67&la=da&mw=200&w=160"><br/><br/>
+                <img style="height:100px;" src="http://historienshus.dk/~/media/Spots/Subsites/Historiens%20Hus/stadsarkivet_logo215x106%20copy.ashx"><br/><br/>
                 <b>By- og Kulturforvaltningen<br/>
                 Odense Kommune<br/><br/>
                 Klosterbakken 2<br/>
