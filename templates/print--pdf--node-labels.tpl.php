@@ -26,7 +26,7 @@ foreach($nodes['node'] as $node_info)
     <span style="float:left;width:100%;"><?php echo $wrapper->field_fornavn->value() . " " . $wrapper->field_efternavn->value(); ?></span><br/>
     <span style="float:left;width:100%;">
         <?php echo $Adresse['thoroughfare'] ?><br/>
-        <?php echo $Adresse['postal_code'] . " " . $Adresse['thoroughfare']; ?>
+        <?php echo $Adresse['postal_code'] . " " . $Adresse['locality']; ?>
     
     </span>
     <span style="float:left;width:100%;"><?php echo $wrapper->__isset('field_tlf_privat') ? $wrapper->field_tlf_privat->value() : "" ?></span>
